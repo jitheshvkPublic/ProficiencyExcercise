@@ -15,15 +15,14 @@ typedef void (^PEJNetworkResourceCompletion) (NSData *Data);
 typedef void (^PEJNetworkResourceFailure) (NSError *Error);
 
 static NSString * const PEJErrorDomain = @"au.com.ProfeciencyExcercise";
-
 static NSString * const PEJCountryDetailTitle = @"title";
 static NSString * const PEJCountryDetailRows = @"rows";
-
 static NSString * const PEJRowItemTitle = @"title";
 static NSString * const PEJRowItemDescription = @"description";
 static NSString * const PEJRowItemImageHref = @"imageHref";
-
 static NSString * const URL = @"https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json";
+
+
 
 @interface Utilities : NSObject
 

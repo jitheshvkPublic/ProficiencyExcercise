@@ -25,7 +25,7 @@
 
 - (instancetype)init
 {
-    return [self initWith:Nil];
+    return [self initWith:[[PEJCountryDetails alloc]init]];
 }
 
 -(void)getDetailsWith:(PEJNetworkResourceSuccess)success failure:(PEJNetworkResourceFailure)failure {
@@ -67,7 +67,8 @@
         NSMutableArray *array = [[NSMutableArray alloc]init];
         
         while (object = [enumerator nextObject]) {
-            PEJRowItemViewModel *viewModel = [[PEJRowItemViewModel alloc]initWith:object];
+            PEJRowItem *rowItem = [[PEJRowItem alloc]initWithDictionary:object];
+            PEJRowItemViewModel *viewModel = [[PEJRowItemViewModel alloc]initWith:rowItem];
             [array addObject:viewModel];
         }
         

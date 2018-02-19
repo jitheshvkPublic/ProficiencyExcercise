@@ -29,6 +29,7 @@
 		6298A2FC203A7E7D00EA4D08 /* PEJRowItemViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A2FB203A7E7D00EA4D08 /* PEJRowItemViewModelTests.m */; };
 		6298A2FE203A807C00EA4D08 /* PEJCountryDetailsViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A2FD203A807C00EA4D08 /* PEJCountryDetailsViewModelTests.m */; };
 		6298A2FF203A819D00EA4D08 /* MockData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A2F4203A6CD100EA4D08 /* MockData.m */; };
+		6298A302203A8AAC00EA4D08 /* CountryDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A301203A8AAC00EA4D08 /* CountryDetailsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,8 @@
 		6298A2F9203A750E00EA4D08 /* PEJRowItemTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEJRowItemTests.m; sourceTree = "<group>"; };
 		6298A2FB203A7E7D00EA4D08 /* PEJRowItemViewModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEJRowItemViewModelTests.m; sourceTree = "<group>"; };
 		6298A2FD203A807C00EA4D08 /* PEJCountryDetailsViewModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEJCountryDetailsViewModelTests.m; sourceTree = "<group>"; };
+		6298A300203A8AAC00EA4D08 /* CountryDetailsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryDetailsTableViewController.h; sourceTree = "<group>"; };
+		6298A301203A8AAC00EA4D08 /* CountryDetailsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryDetailsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +191,8 @@
 		6298A2AF20392DFF00EA4D08 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6298A300203A8AAC00EA4D08 /* CountryDetailsTableViewController.h */,
+				6298A301203A8AAC00EA4D08 /* CountryDetailsTableViewController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -381,6 +386,7 @@
 				6298A2EC203A626C00EA4D08 /* PEJNetworkService.m in Sources */,
 				6298A2ED203A626C00EA4D08 /* PEJNetworkApiClient.m in Sources */,
 				6298A2FF203A819D00EA4D08 /* MockData.m in Sources */,
+				6298A302203A8AAC00EA4D08 /* CountryDetailsTableViewController.m in Sources */,
 				6298A2BA2039341D00EA4D08 /* PEJCountryDetails.m in Sources */,
 				6298A2C62039798700EA4D08 /* Utilities.m in Sources */,
 				6298A2EA203A626C00EA4D08 /* PEJNetworkResourceURLConnection.m in Sources */,
