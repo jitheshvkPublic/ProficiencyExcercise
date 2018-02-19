@@ -13,6 +13,22 @@
 		6298A28C20391A9700EA4D08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A28B20391A9700EA4D08 /* main.m */; };
 		6298A29620391A9700EA4D08 /* ProficiencyExcerciseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A29520391A9700EA4D08 /* ProficiencyExcerciseTests.m */; };
 		6298A2A120391A9700EA4D08 /* ProficiencyExcerciseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A2A020391A9700EA4D08 /* ProficiencyExcerciseUITests.m */; };
+		6298A2BA2039341D00EA4D08 /* PEJCountryDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A2B92039341D00EA4D08 /* PEJCountryDetails.m */; };
+		6298A2BD2039361500EA4D08 /* PEJRowItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A2BC2039361500EA4D08 /* PEJRowItem.m */; };
+		6298A2C62039798700EA4D08 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A2C52039798700EA4D08 /* Utilities.m */; };
+		6298A2C920397E4700EA4D08 /* PEJCountryDetailsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A2C820397E4700EA4D08 /* PEJCountryDetailsViewModel.m */; };
+		6298A2CC20397E5800EA4D08 /* PEJRowItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A2CB20397E5800EA4D08 /* PEJRowItemViewModel.m */; };
+		6298A2EA203A626C00EA4D08 /* PEJNetworkResourceURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A2DE203A626C00EA4D08 /* PEJNetworkResourceURLConnection.m */; };
+		6298A2EB203A626C00EA4D08 /* PEJNetworkResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A2DF203A626C00EA4D08 /* PEJNetworkResource.m */; };
+		6298A2EC203A626C00EA4D08 /* PEJNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A2E0203A626C00EA4D08 /* PEJNetworkService.m */; };
+		6298A2ED203A626C00EA4D08 /* PEJNetworkApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A2E4203A626C00EA4D08 /* PEJNetworkApiClient.m */; };
+		6298A2EE203A626C00EA4D08 /* PEJMockApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A2E5203A626C00EA4D08 /* PEJMockApiClient.m */; };
+		6298A2F1203A687600EA4D08 /* PEJCountryDetailsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A2F0203A687600EA4D08 /* PEJCountryDetailsTests.m */; };
+		6298A2F5203A6CD100EA4D08 /* MockData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A2F4203A6CD100EA4D08 /* MockData.m */; };
+		6298A2FA203A750E00EA4D08 /* PEJRowItemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A2F9203A750E00EA4D08 /* PEJRowItemTests.m */; };
+		6298A2FC203A7E7D00EA4D08 /* PEJRowItemViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A2FB203A7E7D00EA4D08 /* PEJRowItemViewModelTests.m */; };
+		6298A2FE203A807C00EA4D08 /* PEJCountryDetailsViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A2FD203A807C00EA4D08 /* PEJCountryDetailsViewModelTests.m */; };
+		6298A2FF203A819D00EA4D08 /* MockData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A2F4203A6CD100EA4D08 /* MockData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +62,33 @@
 		6298A29C20391A9700EA4D08 /* ProficiencyExcerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProficiencyExcerciseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6298A2A020391A9700EA4D08 /* ProficiencyExcerciseUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProficiencyExcerciseUITests.m; sourceTree = "<group>"; };
 		6298A2A220391A9700EA4D08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6298A2B82039341D00EA4D08 /* PEJCountryDetails.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PEJCountryDetails.h; sourceTree = "<group>"; };
+		6298A2B92039341D00EA4D08 /* PEJCountryDetails.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEJCountryDetails.m; sourceTree = "<group>"; };
+		6298A2BB2039361500EA4D08 /* PEJRowItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PEJRowItem.h; sourceTree = "<group>"; };
+		6298A2BC2039361500EA4D08 /* PEJRowItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEJRowItem.m; sourceTree = "<group>"; };
+		6298A2C42039798700EA4D08 /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		6298A2C52039798700EA4D08 /* Utilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		6298A2C720397E4700EA4D08 /* PEJCountryDetailsViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PEJCountryDetailsViewModel.h; sourceTree = "<group>"; };
+		6298A2C820397E4700EA4D08 /* PEJCountryDetailsViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEJCountryDetailsViewModel.m; sourceTree = "<group>"; };
+		6298A2CA20397E5800EA4D08 /* PEJRowItemViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PEJRowItemViewModel.h; sourceTree = "<group>"; };
+		6298A2CB20397E5800EA4D08 /* PEJRowItemViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEJRowItemViewModel.m; sourceTree = "<group>"; };
+		6298A2DE203A626C00EA4D08 /* PEJNetworkResourceURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEJNetworkResourceURLConnection.m; sourceTree = "<group>"; };
+		6298A2DF203A626C00EA4D08 /* PEJNetworkResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEJNetworkResource.m; sourceTree = "<group>"; };
+		6298A2E0203A626C00EA4D08 /* PEJNetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEJNetworkService.m; sourceTree = "<group>"; };
+		6298A2E1203A626C00EA4D08 /* PEJNetworkResourceURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEJNetworkResourceURLConnection.h; sourceTree = "<group>"; };
+		6298A2E2203A626C00EA4D08 /* PEJApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEJApiClient.h; sourceTree = "<group>"; };
+		6298A2E3203A626C00EA4D08 /* PEJNetworkResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEJNetworkResource.h; sourceTree = "<group>"; };
+		6298A2E4203A626C00EA4D08 /* PEJNetworkApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEJNetworkApiClient.m; sourceTree = "<group>"; };
+		6298A2E5203A626C00EA4D08 /* PEJMockApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEJMockApiClient.m; sourceTree = "<group>"; };
+		6298A2E7203A626C00EA4D08 /* PEJNetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEJNetworkService.h; sourceTree = "<group>"; };
+		6298A2E8203A626C00EA4D08 /* PEJNetworkApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEJNetworkApiClient.h; sourceTree = "<group>"; };
+		6298A2E9203A626C00EA4D08 /* PEJMockApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEJMockApiClient.h; sourceTree = "<group>"; };
+		6298A2F0203A687600EA4D08 /* PEJCountryDetailsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEJCountryDetailsTests.m; sourceTree = "<group>"; };
+		6298A2F3203A6CD100EA4D08 /* MockData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockData.h; sourceTree = "<group>"; };
+		6298A2F4203A6CD100EA4D08 /* MockData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockData.m; sourceTree = "<group>"; };
+		6298A2F9203A750E00EA4D08 /* PEJRowItemTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEJRowItemTests.m; sourceTree = "<group>"; };
+		6298A2FB203A7E7D00EA4D08 /* PEJRowItemViewModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEJRowItemViewModelTests.m; sourceTree = "<group>"; };
+		6298A2FD203A807C00EA4D08 /* PEJCountryDetailsViewModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEJCountryDetailsViewModelTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +139,8 @@
 		6298A27B20391A9700EA4D08 /* ProficiencyExcercise */ = {
 			isa = PBXGroup;
 			children = (
+				6298A2B6203931EF00EA4D08 /* Resources */,
+				6298A2AE20392DDA00EA4D08 /* CountryDetails */,
 				6298A27C20391A9700EA4D08 /* AppDelegate.h */,
 				6298A27D20391A9700EA4D08 /* AppDelegate.m */,
 				6298A28520391A9700EA4D08 /* Assets.xcassets */,
@@ -111,6 +156,12 @@
 			children = (
 				6298A29520391A9700EA4D08 /* ProficiencyExcerciseTests.m */,
 				6298A29720391A9700EA4D08 /* Info.plist */,
+				6298A2F0203A687600EA4D08 /* PEJCountryDetailsTests.m */,
+				6298A2F9203A750E00EA4D08 /* PEJRowItemTests.m */,
+				6298A2FB203A7E7D00EA4D08 /* PEJRowItemViewModelTests.m */,
+				6298A2FD203A807C00EA4D08 /* PEJCountryDetailsViewModelTests.m */,
+				6298A2F3203A6CD100EA4D08 /* MockData.h */,
+				6298A2F4203A6CD100EA4D08 /* MockData.m */,
 			);
 			path = ProficiencyExcerciseTests;
 			sourceTree = "<group>";
@@ -122,6 +173,73 @@
 				6298A2A220391A9700EA4D08 /* Info.plist */,
 			);
 			path = ProficiencyExcerciseUITests;
+			sourceTree = "<group>";
+		};
+		6298A2AE20392DDA00EA4D08 /* CountryDetails */ = {
+			isa = PBXGroup;
+			children = (
+				6298A2B120392E1500EA4D08 /* Model */,
+				6298A2B020392E0A00EA4D08 /* ViewModel */,
+				6298A2AF20392DFF00EA4D08 /* View */,
+			);
+			path = CountryDetails;
+			sourceTree = "<group>";
+		};
+		6298A2AF20392DFF00EA4D08 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6298A2B020392E0A00EA4D08 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6298A2C720397E4700EA4D08 /* PEJCountryDetailsViewModel.h */,
+				6298A2C820397E4700EA4D08 /* PEJCountryDetailsViewModel.m */,
+				6298A2CA20397E5800EA4D08 /* PEJRowItemViewModel.h */,
+				6298A2CB20397E5800EA4D08 /* PEJRowItemViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6298A2B120392E1500EA4D08 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6298A2B82039341D00EA4D08 /* PEJCountryDetails.h */,
+				6298A2B92039341D00EA4D08 /* PEJCountryDetails.m */,
+				6298A2BB2039361500EA4D08 /* PEJRowItem.h */,
+				6298A2BC2039361500EA4D08 /* PEJRowItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6298A2B6203931EF00EA4D08 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6298A2DD203A623100EA4D08 /* Network */,
+				6298A2C42039798700EA4D08 /* Utilities.h */,
+				6298A2C52039798700EA4D08 /* Utilities.m */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6298A2DD203A623100EA4D08 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6298A2E2203A626C00EA4D08 /* PEJApiClient.h */,
+				6298A2E9203A626C00EA4D08 /* PEJMockApiClient.h */,
+				6298A2E5203A626C00EA4D08 /* PEJMockApiClient.m */,
+				6298A2E8203A626C00EA4D08 /* PEJNetworkApiClient.h */,
+				6298A2E4203A626C00EA4D08 /* PEJNetworkApiClient.m */,
+				6298A2E3203A626C00EA4D08 /* PEJNetworkResource.h */,
+				6298A2DF203A626C00EA4D08 /* PEJNetworkResource.m */,
+				6298A2E1203A626C00EA4D08 /* PEJNetworkResourceURLConnection.h */,
+				6298A2DE203A626C00EA4D08 /* PEJNetworkResourceURLConnection.m */,
+				6298A2E7203A626C00EA4D08 /* PEJNetworkService.h */,
+				6298A2E0203A626C00EA4D08 /* PEJNetworkService.m */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +375,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				6298A28C20391A9700EA4D08 /* main.m in Sources */,
+				6298A2CC20397E5800EA4D08 /* PEJRowItemViewModel.m in Sources */,
+				6298A2BD2039361500EA4D08 /* PEJRowItem.m in Sources */,
+				6298A2C920397E4700EA4D08 /* PEJCountryDetailsViewModel.m in Sources */,
+				6298A2EC203A626C00EA4D08 /* PEJNetworkService.m in Sources */,
+				6298A2ED203A626C00EA4D08 /* PEJNetworkApiClient.m in Sources */,
+				6298A2FF203A819D00EA4D08 /* MockData.m in Sources */,
+				6298A2BA2039341D00EA4D08 /* PEJCountryDetails.m in Sources */,
+				6298A2C62039798700EA4D08 /* Utilities.m in Sources */,
+				6298A2EA203A626C00EA4D08 /* PEJNetworkResourceURLConnection.m in Sources */,
+				6298A2EE203A626C00EA4D08 /* PEJMockApiClient.m in Sources */,
 				6298A27E20391A9700EA4D08 /* AppDelegate.m in Sources */,
+				6298A2EB203A626C00EA4D08 /* PEJNetworkResource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +395,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6298A29620391A9700EA4D08 /* ProficiencyExcerciseTests.m in Sources */,
+				6298A2FC203A7E7D00EA4D08 /* PEJRowItemViewModelTests.m in Sources */,
+				6298A2FA203A750E00EA4D08 /* PEJRowItemTests.m in Sources */,
+				6298A2F5203A6CD100EA4D08 /* MockData.m in Sources */,
+				6298A2FE203A807C00EA4D08 /* PEJCountryDetailsViewModelTests.m in Sources */,
+				6298A2F1203A687600EA4D08 /* PEJCountryDetailsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
