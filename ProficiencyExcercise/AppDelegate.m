@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "PEJCountryDetailsViewModel.h"
 
 @interface AppDelegate ()
 
@@ -23,6 +24,13 @@
     UINavigationController *rootNavigationController = [[UINavigationController alloc]initWithRootViewController: viewcontroller];
     self.window.rootViewController = rootNavigationController;
     [self.window makeKeyAndVisible];
+    
+    PEJCountryDetailsViewModel *viewModel = [[PEJCountryDetailsViewModel alloc]init];
+    [viewModel getDetailsWith:^{
+        NSLog(@"Success");
+    } failure:^(NSError *Error) {
+        NSLog(@"%@", Error);
+    }];
     return YES;
 }
 
