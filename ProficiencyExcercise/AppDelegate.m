@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "PEJCountryDetailsViewModel.h"
+#import "PEJCountryDetailsTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //Add window root view controller
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    PEJCountryDetailsTableViewController *viewController = [[PEJCountryDetailsTableViewController alloc]init];
+    UINavigationController *rootNavigationController = [[UINavigationController alloc]initWithRootViewController: viewController];
+    self.window.rootViewController = rootNavigationController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
