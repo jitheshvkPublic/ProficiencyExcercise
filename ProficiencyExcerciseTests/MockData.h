@@ -18,6 +18,5 @@ static NSString * const CountryDetailsWithNullTitle = @"{\"title\":null,\"rows\"
 static NSString * const RowItemWithAllValues = @"{\"description\":\"Beavers are second only to humans in their ability to manipulate and change their environment. They can measure up to 1.3 metres long. A group of beavers is called a colony\",\"imageHref\":\"http://fyimusic.ca/wp-content/uploads/2008/06/hockey-night-in-canada.thumbnail.jpg\",\"title\" : \"Beavers\"}";
 
 static NSString * const RowItemWithAllNullValues = @"{\"description\":null,\"imageHref\":null,\"title\" : null}";
-
 @interface MockData : NSObject
 @end

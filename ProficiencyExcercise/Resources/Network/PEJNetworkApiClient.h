@@ -13,4 +13,5 @@
 
 @interface PEJNetworkApiClient : NSObject <PEJApiClient>
 -(void)requestCountryDetails:(NSString *)url withCompletion:(PEJNetworkResourceCompletion)completion failure:(PEJNetworkResourceFailure)failure;
+-(void)requestImageWithURL:(NSString *)url completion:(PEJNetworkResourceCompletion)completion failure:(PEJNetworkResourceFailure)failure;
 @end

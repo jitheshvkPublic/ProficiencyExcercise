@@ -12,4 +12,8 @@
 -(void)requestCountryDetails:(NSString *)url withCompletion:(PEJNetworkResourceCompletion)completion failure:(PEJNetworkResourceFailure)failure {
     [PEJNetworkResource request:url withCompletion:completion failure:failure];
 }
+
+-(void)requestImageWithURL:(NSString *)url completion:(PEJNetworkResourceCompletion)completion failure:(PEJNetworkResourceFailure)failure {
+    [PEJNetworkResource request:url withCompletion:completion failure:failure];
+}
 @end

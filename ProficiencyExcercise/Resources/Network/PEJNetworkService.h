@@ -15,4 +15,5 @@
 
 - (instancetype)initWithApiClient:(id <PEJApiClient>)apiClient;
 -(void)requestCountryDetailsWithCompletion:(PEJNetworkResourceCompletion)completion failure:(PEJNetworkResourceFailure)failure;
+-(void)requestImageWithURLString:(NSString *)url withCompletion:(PEJNetworkResourceCompletion)completion falure:(PEJNetworkResourceFailure)failure;
 @end

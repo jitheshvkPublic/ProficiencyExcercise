@@ -58,6 +58,8 @@
         }
     }
     
-    resource.completion(resource.data);
+    if (resource.completion) {
+        resource.completion(resource.data);
+    }
 }
 @end

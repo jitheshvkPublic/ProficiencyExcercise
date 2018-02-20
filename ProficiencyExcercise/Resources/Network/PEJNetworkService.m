@@ -18,9 +18,15 @@
     return self;
 }
 
--(void)requestCountryDetailsWithCompletion:(PEJNetworkResourceCompletion)completion failure:(PEJNetworkResourceFailure)failure; {
+-(void)requestCountryDetailsWithCompletion:(PEJNetworkResourceCompletion)completion failure:(PEJNetworkResourceFailure)failure {
     if (self.client && [self.client respondsToSelector:@selector(requestCountryDetails:withCompletion:failure:)]) {
         [self.client requestCountryDetails:URL withCompletion:completion failure:failure];
+    }
+}
+
+-(void)requestImageWithURLString:(NSString *)url withCompletion:(PEJNetworkResourceCompletion)completion falure:(PEJNetworkResourceFailure)failure {
+    if (self.client && [self.client respondsToSelector:@selector(requestImageWithURL:completion:failure:)]) {
+        [self.client requestImageWithURL:url completion:completion failure:failure];
     }
 }
 @end
