@@ -30,4 +30,12 @@
     
     return self;
 }
+
+- (instancetype)init
+{
+    self = [self initWithDictionary:[NSDictionary dictionary]];
+    if (self) {
+    }
+    return self;
+}
 @end

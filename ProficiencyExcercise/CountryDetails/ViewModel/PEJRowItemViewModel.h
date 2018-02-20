@@ -8,10 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "PEJRowItem.h"
+#import "PEJNetworkService.h"
+#import "PEJNetworkApiClient.h"
 
 @interface PEJRowItemViewModel : NSObject
+@property (nonatomic) id<PEJApiClient> client;
+
 -(instancetype)initWith:(PEJRowItem *)rowItem;
 -(NSString *)getTitle;
 -(NSString *)getDescription;
 -(NSString *)getImageURL;
+-(void)getImageDataWith:(PEJNetworkResourceCompletion)completionHandler;
 @end

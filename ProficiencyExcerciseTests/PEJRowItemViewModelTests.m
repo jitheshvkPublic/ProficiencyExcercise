@@ -11,6 +11,7 @@
 #import "PEJRowItem.h"
 #import "Utilities.h"
 #import "MockData.h"
+#import "PEJMockApiClient.h"
 
 @interface PEJRowItemViewModelTests : XCTestCase
 
@@ -56,4 +57,35 @@
     XCTAssertTrue([viewModel.getDescription isEqualToString:@""]);
 }
 
+- (void)testGetImageData {
+    NSError *jsonError;
+    NSData *objectData = [RowItemWithAllValues dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:objectData options:NSJSONReadingMutableContainers error:&jsonError];
+    
+    PEJRowItem *rowItem = [[PEJRowItem alloc]initWithDictionary:jsonDictionary];
+    PEJRowItemViewModel *viewModel = [[PEJRowItemViewModel alloc]initWith:rowItem];
+    XCTAssertNotNil(viewModel);
+    viewModel.client = [[PEJMockApiClient alloc]init];
+    
+    XCTestExpectation *asyncExpectation = [self expectationWithDescription:@"testGetImageData"];
+    
+    [viewModel getImageDataWith:^(NSData *Data) {
+        [asyncExpectation fulfill];
+        
+        XCTAssertNotNil(Data);
+    }];
+    
+    [self waitForExpectationsWithTimeout:1 handler:^(NSError *error) {
+        XCTAssertNil(error);
+    }];
+}
+
+- (void)testPerformanceGetDetails{
+    // This is an example of a performance test case.
+    [self measureBlock:^{
+        PEJRowItemViewModel *viewModel = [[PEJRowItemViewModel alloc]initWith:[[PEJRowItem alloc]init]];
+        viewModel.client = [[PEJMockApiClient alloc]init];
+        [viewModel getImageDataWith:nil];
+    }];
+}
 @end

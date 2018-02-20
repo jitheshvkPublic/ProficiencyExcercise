@@ -10,6 +10,7 @@
 
 @interface PEJRowItemViewModel()
 @property PEJRowItem *rowItem;
+@property NSData *imageData;
 @end
 
 @implementation PEJRowItemViewModel
@@ -18,6 +19,8 @@
     self = [super init];
     if (self) {
         _rowItem = rowItem;
+        _client = [[PEJNetworkApiClient alloc] init];
+        _imageData = nil;
     }
     return self;
 }
@@ -46,6 +49,36 @@
     }
     else {
         return @"";
+    }
+}
+
+-(void)getImageDataWith:(PEJNetworkResourceCompletion)completionHandler {
+    if (self.imageData) {
+        if (completionHandler) {
+            completionHandler(self.imageData);
+        }
+    }
+    else {
+        if (self.rowItem.imageHref) {
+            PEJNetworkService *service = [[PEJNetworkService alloc]initWithApiClient:self.client];
+            [service requestImageWithURLString:self.rowItem.imageHref withCompletion:^(NSData *Data) {
+                if (Data) {
+                    self.imageData = [[NSData alloc]initWithData:Data];
+                    if (completionHandler) {
+                        completionHandler(Data);
+                    }
+                }
+            } falure:^(NSError *Error) {
+                if (completionHandler) {
+                    completionHandler(nil);
+                }
+            }];
+        }
+        else {
+            if (completionHandler) {
+                completionHandler(nil);
+            }
+        }
     }
 }
 @end
