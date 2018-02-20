@@ -20,7 +20,6 @@
     if (self) {
         _rowItem = rowItem;
         _client = [[PEJNetworkApiClient alloc] init];
-        _imageData = nil;
     }
     return self;
 }
@@ -60,10 +59,11 @@
     }
     else {
         if (self.rowItem.imageHref) {
+            __weak PEJRowItemViewModel *weakSelf = self;
             PEJNetworkService *service = [[PEJNetworkService alloc]initWithApiClient:self.client];
             [service requestImageWithURLString:self.rowItem.imageHref withCompletion:^(NSData *Data) {
                 if (Data) {
-                    self.imageData = [[NSData alloc]initWithData:Data];
+                    weakSelf.imageData = [[NSData alloc]initWithData:Data];
                     if (completionHandler) {
                         completionHandler(Data);
                     }

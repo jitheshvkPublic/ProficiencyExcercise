@@ -10,7 +10,7 @@
 
 @interface PEJCountryDetailsTableViewController ()
 -(void)setupView;
--(void)setData;
+-(void)reloadData;
 -(void)refreshData;
 @end
 
@@ -31,7 +31,7 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self refreshData];
+    [self reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,7 +43,7 @@
 -(void)setupView {
     //Add pulldown refresh
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc]init];
-    [refreshControl addTarget:self action:@selector(refreshData) forControlEvents:UIControlEventValueChanged];
+    [refreshControl addTarget:self action:@selector(reloadData) forControlEvents:UIControlEventValueChanged];
     if (@available(iOS 10.0, *)) {
         self.tableView.refreshControl = refreshControl;
     } else {
@@ -57,23 +57,27 @@
     [self.tableView registerClass:[PEJCountryDetailsTableViewCell class] forCellReuseIdentifier:PEJCountryDetailsTableViewCellIdentifier];
 }
 
--(void)setData {
+-(void)refreshData {
     self.navigationItem.title = self.viewModel.getTitle;
     [self.tableView reloadData];
+    if ([self.refreshControl isRefreshing]) {
+        [self.refreshControl endRefreshing];
+    }
 }
 
--(void)refreshData {
+-(void)reloadData {
+    __weak PEJCountryDetailsTableViewController *weakSelf = self;
     [self.viewModel getDetailsWith:^{
-        [self setData];
-        [self.refreshControl endRefreshing];
+        [weakSelf.refreshControl endRefreshing];
+        [weakSelf refreshData];
     } failure:^(NSError *Error) {
-        [self.refreshControl endRefreshing];
+        [weakSelf.refreshControl endRefreshing];
         
         if(Error) {
             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Could not load data" message:[Error localizedDescription] preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
             [alertController addAction:okAction];
-            [self presentViewController:alertController animated:YES completion:nil];
+            [weakSelf presentViewController:alertController animated:YES completion:nil];
         }
     }];
 }

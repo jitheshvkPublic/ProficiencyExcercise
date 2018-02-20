@@ -8,8 +8,8 @@
 
 #import "PEJNetworkResourceURLConnection.h"
 @interface PEJNetworkResourceURLConnection()
-@property PEJNetworkResourceCompletion completion;
-@property PEJNetworkResourceFailure failure;
+@property (copy) PEJNetworkResourceCompletion completion;
+@property (copy) PEJNetworkResourceFailure failure;
 @property NSMutableData *data;
 @property NSURLResponse *response;
 @end

@@ -24,6 +24,6 @@
 
 -(void)setup {
     self.translatesAutoresizingMaskIntoConstraints = false;
-    self.numberOfLines = 0;
+    self.numberOfLines = 0; //set this to 0 for dynamic height UITableViewCell.
 }
 @end

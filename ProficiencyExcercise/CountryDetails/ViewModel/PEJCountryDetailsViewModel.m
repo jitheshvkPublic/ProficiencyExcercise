@@ -33,6 +33,7 @@
     [service requestCountryDetailsWithCompletion:^(NSData *Data) {
         if (Data) {
             NSError *error = nil;
+            //Convert json response to UTF8StringEncoding
             NSString *serverResponse = [[NSString alloc] initWithData:Data encoding:NSASCIIStringEncoding];
             NSString *jsonString = [serverResponse stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
             NSData *formattedJSONData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
@@ -41,7 +42,6 @@
             
             if ([json isKindOfClass:[NSDictionary class]] && error == nil) {
                 self.countryDetails = [[PEJCountryDetails alloc] initWithDictionary:json];
-                NSLog(@"%@", json);
                 success();
             }
             else {
@@ -62,6 +62,7 @@
 
 -(NSArray *) getRowItems {
     if (self.countryDetails.rows) {
+        //Create PEJRowItemViewModel array
         NSEnumerator *enumerator = [self.countryDetails.rows objectEnumerator];
         id object;
         NSMutableArray *array = [[NSMutableArray alloc]init];
