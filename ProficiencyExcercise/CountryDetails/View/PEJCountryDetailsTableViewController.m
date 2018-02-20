@@ -1,19 +1,20 @@
 //
-//  CountryDetailsTableViewController.m
+//  PEJCountryDetailsTableViewController.m
 //  ProficiencyExcercise
 //
 //  Created by Jithesh Valsan on 19/2/18.
 //  Copyright © 2018 Jithesh. All rights reserved.
 //
 
-#import "CountryDetailsTableViewController.h"
+#import "PEJCountryDetailsTableViewController.h"
 
-@interface CountryDetailsTableViewController ()
--(void)setup;
+@interface PEJCountryDetailsTableViewController ()
+-(void)setupView;
+-(void)setData;
 -(void)refreshData;
 @end
 
-@implementation CountryDetailsTableViewController
+@implementation PEJCountryDetailsTableViewController
 - (instancetype)init
 {
     self = [super init];
@@ -25,7 +26,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setup];
+    [self setupView];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self refreshData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,7 +40,7 @@
 }
 
 #pragma mark - Supporting functions
--(void)setup {
+-(void)setupView {
     //Add pulldown refresh
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc]init];
     [refreshControl addTarget:self action:@selector(refreshData) forControlEvents:UIControlEventValueChanged];
@@ -48,15 +54,27 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 100;
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+    [self.tableView registerClass:[PEJCountryDetailsTableViewCell class] forCellReuseIdentifier:PEJCountryDetailsTableViewCellIdentifier];
+}
+
+-(void)setData {
+    self.navigationItem.title = self.viewModel.getTitle;
+    [self.tableView reloadData];
 }
 
 -(void)refreshData {
     [self.viewModel getDetailsWith:^{
-        [self.tableView reloadData];
+        [self setData];
         [self.refreshControl endRefreshing];
     } failure:^(NSError *Error) {
         [self.refreshControl endRefreshing];
+        
+        if(Error) {
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Could not load data" message:[Error localizedDescription] preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
+            [alertController addAction:okAction];
+            [self presentViewController:alertController animated:YES completion:nil];
+        }
     }];
 }
 
@@ -76,13 +94,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];    // Configure the cell...
-    
-    if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-    }
+    PEJCountryDetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:PEJCountryDetailsTableViewCellIdentifier forIndexPath:indexPath];
+
     PEJRowItemViewModel *rowItemViewModel = [self.viewModel.getRowItems objectAtIndex:[indexPath row]];
-    cell.textLabel.text = rowItemViewModel.getTitle;
+    [cell configureCellWith:rowItemViewModel];
     return cell;
 }
 

@@ -1,5 +1,5 @@
 //
-//  CountryDetailsTableViewController.h
+//  PEJCountryDetailsTableViewController.h
 //  ProficiencyExcercise
 //
 //  Created by Jithesh Valsan on 19/2/18.
@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "PEJCountryDetailsViewModel.h"
 #import "PEJRowItemViewModel.h"
+#import "PEJCountryDetailsTableViewCell.h"
 
-@interface CountryDetailsTableViewController : UITableViewController
+@interface PEJCountryDetailsTableViewController : UITableViewController
 @property (nonatomic) PEJCountryDetailsViewModel *viewModel;
 @end

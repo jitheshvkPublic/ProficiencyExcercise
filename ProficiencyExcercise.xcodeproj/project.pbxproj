@@ -29,9 +29,9 @@
 		6298A2FC203A7E7D00EA4D08 /* PEJRowItemViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A2FB203A7E7D00EA4D08 /* PEJRowItemViewModelTests.m */; };
 		6298A2FE203A807C00EA4D08 /* PEJCountryDetailsViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A2FD203A807C00EA4D08 /* PEJCountryDetailsViewModelTests.m */; };
 		6298A2FF203A819D00EA4D08 /* MockData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A2F4203A6CD100EA4D08 /* MockData.m */; };
-		6298A302203A8AAC00EA4D08 /* CountryDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A301203A8AAC00EA4D08 /* CountryDetailsTableViewController.m */; };
-		6298A308203AA2C300EA4D08 /* DynamicHeightLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A307203AA2C300EA4D08 /* DynamicHeightLabel.m */; };
-		6298A30B203AA3A000EA4D08 /* CountryDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A30A203AA3A000EA4D08 /* CountryDetailsTableViewCell.m */; };
+		6298A302203A8AAC00EA4D08 /* PEJCountryDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A301203A8AAC00EA4D08 /* PEJCountryDetailsTableViewController.m */; };
+		6298A308203AA2C300EA4D08 /* PEJDynamicHeightLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A307203AA2C300EA4D08 /* PEJDynamicHeightLabel.m */; };
+		6298A30B203AA3A000EA4D08 /* PEJCountryDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298A30A203AA3A000EA4D08 /* PEJCountryDetailsTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,12 +92,12 @@
 		6298A2F9203A750E00EA4D08 /* PEJRowItemTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEJRowItemTests.m; sourceTree = "<group>"; };
 		6298A2FB203A7E7D00EA4D08 /* PEJRowItemViewModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEJRowItemViewModelTests.m; sourceTree = "<group>"; };
 		6298A2FD203A807C00EA4D08 /* PEJCountryDetailsViewModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEJCountryDetailsViewModelTests.m; sourceTree = "<group>"; };
-		6298A300203A8AAC00EA4D08 /* CountryDetailsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryDetailsTableViewController.h; sourceTree = "<group>"; };
-		6298A301203A8AAC00EA4D08 /* CountryDetailsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryDetailsTableViewController.m; sourceTree = "<group>"; };
-		6298A306203AA2C300EA4D08 /* DynamicHeightLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicHeightLabel.h; sourceTree = "<group>"; };
-		6298A307203AA2C300EA4D08 /* DynamicHeightLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicHeightLabel.m; sourceTree = "<group>"; };
-		6298A309203AA3A000EA4D08 /* CountryDetailsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryDetailsTableViewCell.h; sourceTree = "<group>"; };
-		6298A30A203AA3A000EA4D08 /* CountryDetailsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryDetailsTableViewCell.m; sourceTree = "<group>"; };
+		6298A300203A8AAC00EA4D08 /* PEJCountryDetailsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PEJCountryDetailsTableViewController.h; sourceTree = "<group>"; };
+		6298A301203A8AAC00EA4D08 /* PEJCountryDetailsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEJCountryDetailsTableViewController.m; sourceTree = "<group>"; };
+		6298A306203AA2C300EA4D08 /* PEJDynamicHeightLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PEJDynamicHeightLabel.h; sourceTree = "<group>"; };
+		6298A307203AA2C300EA4D08 /* PEJDynamicHeightLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEJDynamicHeightLabel.m; sourceTree = "<group>"; };
+		6298A309203AA3A000EA4D08 /* PEJCountryDetailsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PEJCountryDetailsTableViewCell.h; sourceTree = "<group>"; };
+		6298A30A203AA3A000EA4D08 /* PEJCountryDetailsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEJCountryDetailsTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,12 +197,12 @@
 		6298A2AF20392DFF00EA4D08 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6298A300203A8AAC00EA4D08 /* CountryDetailsTableViewController.h */,
-				6298A301203A8AAC00EA4D08 /* CountryDetailsTableViewController.m */,
-				6298A306203AA2C300EA4D08 /* DynamicHeightLabel.h */,
-				6298A307203AA2C300EA4D08 /* DynamicHeightLabel.m */,
-				6298A309203AA3A000EA4D08 /* CountryDetailsTableViewCell.h */,
-				6298A30A203AA3A000EA4D08 /* CountryDetailsTableViewCell.m */,
+				6298A300203A8AAC00EA4D08 /* PEJCountryDetailsTableViewController.h */,
+				6298A301203A8AAC00EA4D08 /* PEJCountryDetailsTableViewController.m */,
+				6298A306203AA2C300EA4D08 /* PEJDynamicHeightLabel.h */,
+				6298A307203AA2C300EA4D08 /* PEJDynamicHeightLabel.m */,
+				6298A309203AA3A000EA4D08 /* PEJCountryDetailsTableViewCell.h */,
+				6298A30A203AA3A000EA4D08 /* PEJCountryDetailsTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -394,15 +394,15 @@
 				6298A2BD2039361500EA4D08 /* PEJRowItem.m in Sources */,
 				6298A2C920397E4700EA4D08 /* PEJCountryDetailsViewModel.m in Sources */,
 				6298A2EC203A626C00EA4D08 /* PEJNetworkService.m in Sources */,
-				6298A30B203AA3A000EA4D08 /* CountryDetailsTableViewCell.m in Sources */,
+				6298A30B203AA3A000EA4D08 /* PEJCountryDetailsTableViewCell.m in Sources */,
 				6298A2ED203A626C00EA4D08 /* PEJNetworkApiClient.m in Sources */,
 				6298A2FF203A819D00EA4D08 /* MockData.m in Sources */,
-				6298A302203A8AAC00EA4D08 /* CountryDetailsTableViewController.m in Sources */,
+				6298A302203A8AAC00EA4D08 /* PEJCountryDetailsTableViewController.m in Sources */,
 				6298A2BA2039341D00EA4D08 /* PEJCountryDetails.m in Sources */,
 				6298A2C62039798700EA4D08 /* Utilities.m in Sources */,
 				6298A2EA203A626C00EA4D08 /* PEJNetworkResourceURLConnection.m in Sources */,
 				6298A2EE203A626C00EA4D08 /* PEJMockApiClient.m in Sources */,
-				6298A308203AA2C300EA4D08 /* DynamicHeightLabel.m in Sources */,
+				6298A308203AA2C300EA4D08 /* PEJDynamicHeightLabel.m in Sources */,
 				6298A27E20391A9700EA4D08 /* AppDelegate.m in Sources */,
 				6298A2EB203A626C00EA4D08 /* PEJNetworkResource.m in Sources */,
 			);
