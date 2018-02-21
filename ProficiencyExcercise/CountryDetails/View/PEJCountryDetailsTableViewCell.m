@@ -29,11 +29,11 @@
     self.translatesAutoresizingMaskIntoConstraints = NO;
     
     self.rowTitleLabel = [[PEJDynamicHeightLabel alloc]init];
-    [self.rowTitleLabel setFont:[UIFont boldSystemFontOfSize:14]];
+    [self.rowTitleLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline]];
     [self.contentView addSubview:self.rowTitleLabel];
     
     self.rowDescriptionLabel = [[PEJDynamicHeightLabel alloc]init];
-    [self.rowDescriptionLabel setFont:[UIFont systemFontOfSize:14]];
+    [self.rowDescriptionLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleCaption1]];
     [self.contentView addSubview:self.rowDescriptionLabel];
     
     self.rowImageView = [[UIImageView alloc]init];
