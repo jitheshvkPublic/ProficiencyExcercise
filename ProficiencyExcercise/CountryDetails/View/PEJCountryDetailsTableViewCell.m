@@ -29,9 +29,11 @@
     self.translatesAutoresizingMaskIntoConstraints = NO;
     
     self.rowTitleLabel = [[PEJDynamicHeightLabel alloc]init];
+    [self.rowTitleLabel setFont:[UIFont boldSystemFontOfSize:14]];
     [self.contentView addSubview:self.rowTitleLabel];
     
     self.rowDescriptionLabel = [[PEJDynamicHeightLabel alloc]init];
+    [self.rowDescriptionLabel setFont:[UIFont systemFontOfSize:14]];
     [self.contentView addSubview:self.rowDescriptionLabel];
     
     self.rowImageView = [[UIImageView alloc]init];
@@ -60,12 +62,13 @@
     NSLayoutConstraint *descriptionLabeltopConstraint = [NSLayoutConstraint constraintWithItem:self.rowDescriptionLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.rowTitleLabel attribute:NSLayoutAttributeBottom multiplier:1 constant:16];
     NSLayoutConstraint *descriptionLabelLeadingConstraint = [NSLayoutConstraint constraintWithItem:self.rowDescriptionLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.rowImageView attribute:NSLayoutAttributeTrailing multiplier:1 constant:16];
     NSLayoutConstraint *descriptionLabelTrailingConstraint = [NSLayoutConstraint constraintWithItem:self.rowDescriptionLabel.superview attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.rowDescriptionLabel attribute:NSLayoutAttributeTrailing multiplier:1 constant:16];
-    NSLayoutConstraint *descriptionLabelBottomConstraint = [NSLayoutConstraint constraintWithItem:self.rowDescriptionLabel.superview attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.rowDescriptionLabel attribute:NSLayoutAttributeBottom multiplier:1 constant:16];
+    NSLayoutConstraint *descriptionLabelBottomConstraint = [NSLayoutConstraint constraintWithItem:self.rowDescriptionLabel.superview attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:self.rowDescriptionLabel attribute:NSLayoutAttributeBottom multiplier:1 constant:16];
     //Reduce the priority to avoid constraint break when the image view has different size content.
     imageViewHeightConstraint.priority = 999;
     //Set content hugging priority of title label more than description label to make the title
     // align to the top when there is no description.
-    [self.rowTitleLabel setContentHuggingPriority:251 forAxis:UILayoutConstraintAxisVertical];
+    [self.rowTitleLabel setContentHuggingPriority:252 forAxis:UILayoutConstraintAxisVertical];
+    [self.rowDescriptionLabel setContentHuggingPriority:251 forAxis:UILayoutConstraintAxisVertical];
     [NSLayoutConstraint activateConstraints:@[imageViewTopConstraint, imageViewWidthConstraint, imageViewHeightConstraint, imageViewBottomConstraint, imageViewLeadingConstraint, titleLabelTopConstraint, titleLabelLeadingConstraint, titleLabelTrailingConstraint, descriptionLabeltopConstraint, descriptionLabelBottomConstraint, descriptionLabelLeadingConstraint, descriptionLabelTrailingConstraint]];
 }
 
