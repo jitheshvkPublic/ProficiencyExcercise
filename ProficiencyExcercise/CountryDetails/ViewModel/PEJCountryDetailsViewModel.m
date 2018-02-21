@@ -13,8 +13,7 @@
 @end
 
 @implementation PEJCountryDetailsViewModel
-- (instancetype)initWith:(PEJCountryDetails *)countryDetails
-{
+- (instancetype)initWith:(PEJCountryDetails *)countryDetails {
     self = [super init];
     if (self) {
         _countryDetails = countryDetails;
@@ -23,8 +22,7 @@
     return self;
 }
 
-- (instancetype)init
-{
+- (instancetype)init {
     return [self initWith:[[PEJCountryDetails alloc]init]];
 }
 
@@ -69,8 +67,13 @@
         
         while (object = [enumerator nextObject]) {
             PEJRowItem *rowItem = [[PEJRowItem alloc]initWithDictionary:object];
-            PEJRowItemViewModel *viewModel = [[PEJRowItemViewModel alloc]initWith:rowItem];
-            [array addObject:viewModel];
+            //Add a row only if it has any one of title, imageref and description.
+            if ((rowItem.title) ||
+                (rowItem.itemDescription) ||
+                (rowItem.imageHref)) {
+                PEJRowItemViewModel *viewModel = [[PEJRowItemViewModel alloc]initWith:rowItem];
+                [array addObject:viewModel];
+            }
         }
         
         return array;

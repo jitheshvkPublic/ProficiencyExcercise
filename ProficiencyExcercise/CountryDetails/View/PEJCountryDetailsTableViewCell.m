@@ -29,9 +29,11 @@
     self.translatesAutoresizingMaskIntoConstraints = NO;
     
     self.rowTitleLabel = [[PEJDynamicHeightLabel alloc]init];
+    [self.rowTitleLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline]];
     [self.contentView addSubview:self.rowTitleLabel];
     
     self.rowDescriptionLabel = [[PEJDynamicHeightLabel alloc]init];
+    [self.rowDescriptionLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleCaption1]];
     [self.contentView addSubview:self.rowDescriptionLabel];
     
     self.rowImageView = [[UIImageView alloc]init];
@@ -42,25 +44,32 @@
     self.rowImageView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.contentView addSubview:self.rowImageView];
     [self addConstraintForCell];
-    [self layoutIfNeeded];
+    [self setNeedsUpdateConstraints];
 }
 
 -(void)addConstraintForCell {
+    //Create imageview constraints
+    NSLayoutConstraint *imageViewLeadingConstraint =[NSLayoutConstraint constraintWithItem:self.rowImageView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.rowImageView.superview attribute:NSLayoutAttributeLeading multiplier:1 constant:16];
+    NSLayoutConstraint *imageViewWidthConstraint = [NSLayoutConstraint constraintWithItem:self.rowImageView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:90];
+    NSLayoutConstraint *imageViewTopConstraint = [NSLayoutConstraint constraintWithItem:self.rowImageView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.rowImageView.superview attribute:NSLayoutAttributeTop multiplier:1 constant:16];
+    NSLayoutConstraint *imageViewHeightConstraint = [NSLayoutConstraint constraintWithItem:self.rowImageView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:90];
+    NSLayoutConstraint *imageViewBottomConstraint = [NSLayoutConstraint constraintWithItem:self.rowImageView.superview attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:self.rowImageView attribute:NSLayoutAttributeBottom multiplier:1 constant:16];
     //Create title label constraints
-        NSLayoutConstraint *titleLabelTopConstraint = [NSLayoutConstraint constraintWithItem:self.rowTitleLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.rowTitleLabel.superview attribute:NSLayoutAttributeTop multiplier:1 constant:16];
-        NSLayoutConstraint *titleLabelLeadingConstraint = [NSLayoutConstraint constraintWithItem:self.rowTitleLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.rowTitleLabel.superview attribute:NSLayoutAttributeLeading multiplier:1 constant:16];
-        NSLayoutConstraint *titleLabelTrailingConstraint = [NSLayoutConstraint constraintWithItem:self.rowTitleLabel.superview attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.rowTitleLabel attribute:NSLayoutAttributeTrailing multiplier:1 constant:16];
-    //Create ImageView constraints
-        NSLayoutConstraint *imageViewCenterXConstraint = [NSLayoutConstraint constraintWithItem:self.rowImageView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.rowImageView.superview attribute:NSLayoutAttributeCenterX multiplier:1 constant:0];
-        NSLayoutConstraint *imageViewheightConstraint = [NSLayoutConstraint constraintWithItem:self.rowImageView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:140];
-        NSLayoutConstraint *imageViewWidthConstraint = [NSLayoutConstraint constraintWithItem:self.rowImageView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:140];
-        NSLayoutConstraint *imageViewTopConstraint = [NSLayoutConstraint constraintWithItem:self.rowImageView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.rowTitleLabel attribute:NSLayoutAttributeBottom multiplier:1 constant:16];
-        //Create description label constraints
-        NSLayoutConstraint *descriptionLabelTopConstraint = [NSLayoutConstraint constraintWithItem:self.rowDescriptionLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.rowImageView attribute:NSLayoutAttributeBottom multiplier:1 constant:16];
-        NSLayoutConstraint *descriptionLabelLeadingConstraint = [NSLayoutConstraint constraintWithItem:self.rowDescriptionLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.rowDescriptionLabel.superview attribute:NSLayoutAttributeLeading multiplier:1 constant:16];
-        NSLayoutConstraint *descriptionLabelTrailingConstraint = [NSLayoutConstraint constraintWithItem:self.rowDescriptionLabel.superview attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.rowDescriptionLabel attribute:NSLayoutAttributeTrailing multiplier:1 constant:16];
-        NSLayoutConstraint *descriptionLabelBottomConstraint = [NSLayoutConstraint constraintWithItem:self.rowDescriptionLabel.superview attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem: self.rowDescriptionLabel attribute:NSLayoutAttributeBottom multiplier:1 constant:16];
-        [self.contentView addConstraints:@[titleLabelTopConstraint, titleLabelLeadingConstraint, titleLabelTrailingConstraint, imageViewTopConstraint, imageViewCenterXConstraint, imageViewheightConstraint, imageViewWidthConstraint, descriptionLabelTopConstraint, descriptionLabelLeadingConstraint, descriptionLabelTrailingConstraint, descriptionLabelBottomConstraint]];
+    NSLayoutConstraint *titleLabelTopConstraint = [NSLayoutConstraint constraintWithItem:self.rowTitleLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.rowTitleLabel.superview attribute:NSLayoutAttributeTop multiplier:1 constant:16];
+    NSLayoutConstraint *titleLabelTrailingConstraint = [NSLayoutConstraint constraintWithItem:self.rowTitleLabel.superview attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.rowTitleLabel attribute:NSLayoutAttributeTrailing multiplier:1 constant:16];
+    NSLayoutConstraint *titleLabelLeadingConstraint = [NSLayoutConstraint constraintWithItem:self.rowTitleLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.rowImageView attribute:NSLayoutAttributeTrailing multiplier:1 constant:16];
+    //Create description label
+    NSLayoutConstraint *descriptionLabeltopConstraint = [NSLayoutConstraint constraintWithItem:self.rowDescriptionLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.rowTitleLabel attribute:NSLayoutAttributeBottom multiplier:1 constant:16];
+    NSLayoutConstraint *descriptionLabelLeadingConstraint = [NSLayoutConstraint constraintWithItem:self.rowDescriptionLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.rowImageView attribute:NSLayoutAttributeTrailing multiplier:1 constant:16];
+    NSLayoutConstraint *descriptionLabelTrailingConstraint = [NSLayoutConstraint constraintWithItem:self.rowDescriptionLabel.superview attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.rowDescriptionLabel attribute:NSLayoutAttributeTrailing multiplier:1 constant:16];
+    NSLayoutConstraint *descriptionLabelBottomConstraint = [NSLayoutConstraint constraintWithItem:self.rowDescriptionLabel.superview attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:self.rowDescriptionLabel attribute:NSLayoutAttributeBottom multiplier:1 constant:16];
+    //Reduce the priority to avoid constraint break when the image view has different size content.
+    imageViewHeightConstraint.priority = 999;
+    //Set content hugging priority of title label more than description label to make the title
+    // align to the top when there is no description.
+    [self.rowTitleLabel setContentHuggingPriority:252 forAxis:UILayoutConstraintAxisVertical];
+    [self.rowDescriptionLabel setContentHuggingPriority:251 forAxis:UILayoutConstraintAxisVertical];
+    [NSLayoutConstraint activateConstraints:@[imageViewTopConstraint, imageViewWidthConstraint, imageViewHeightConstraint, imageViewBottomConstraint, imageViewLeadingConstraint, titleLabelTopConstraint, titleLabelLeadingConstraint, titleLabelTrailingConstraint, descriptionLabeltopConstraint, descriptionLabelBottomConstraint, descriptionLabelLeadingConstraint, descriptionLabelTrailingConstraint]];
 }
 
 -(void)configureCellWith:(PEJRowItemViewModel *)rowItem {
@@ -77,7 +86,7 @@
             else {
                 self.rowImageView.image = [UIImage imageNamed:PEJDefaultImageName];
             }
-            [self layoutIfNeeded];
+            [self setNeedsUpdateConstraints];
         }];
     }
     else {
@@ -85,7 +94,7 @@
         self.rowDescriptionLabel.text = @"";
         self.rowImageView.image = [UIImage imageNamed:PEJDefaultImageName];
     }
-    [self layoutIfNeeded];
+    [self setNeedsUpdateConstraints];
 }
 
 

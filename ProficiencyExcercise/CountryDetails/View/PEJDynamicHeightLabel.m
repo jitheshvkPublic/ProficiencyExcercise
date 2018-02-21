@@ -13,8 +13,7 @@
 @end
 
 @implementation PEJDynamicHeightLabel
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         [self setup];
@@ -25,5 +24,6 @@
 -(void)setup {
     self.translatesAutoresizingMaskIntoConstraints = false;
     self.numberOfLines = 0; //set this to 0 for dynamic height UITableViewCell.
+    [self setTextAlignment:NSTextAlignmentLeft];
 }
 @end

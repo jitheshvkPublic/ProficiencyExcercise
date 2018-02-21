@@ -14,8 +14,7 @@
 @end
 
 @implementation PEJRowItemViewModel
-- (instancetype)initWith:(PEJRowItem *)rowItem
-{
+- (instancetype)initWith:(PEJRowItem *)rowItem {
     self = [super init];
     if (self) {
         _rowItem = rowItem;
@@ -26,7 +25,7 @@
 
 -(NSString *)getTitle {
     if(self.rowItem.title) {
-        return self.rowItem.title;
+        return [self.rowItem.title stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     }
     else {
         return @"";
@@ -35,7 +34,7 @@
 
 -(NSString *)getDescription {
     if(self.rowItem.itemDescription) {
-        return self.rowItem.itemDescription;
+        return [self.rowItem.itemDescription stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     }
     else {
         return @"";

@@ -10,7 +10,7 @@
 
 @implementation PEJMockApiClient
 -(void)requestCountryDetails:(NSString *)url withCompletion:(PEJNetworkResourceCompletion)completion failure:(PEJNetworkResourceFailure)failure {
-        NSData *objectData = [CountryDetailsWithAllValues dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *objectData = [CountryDetailsWithAllValues dataUsingEncoding:NSUTF8StringEncoding];
     if (completion) {
         completion(objectData);
     }
