@@ -22,7 +22,7 @@ static NSString * const PEJRowItemDescription = @"description";
 static NSString * const PEJRowItemImageHref = @"imageHref";
 static NSString * const URL = @"https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json";
 static NSString * const PEJCountryDetailsTableViewCellIdentifier = @"CountryDetailsTableViewCell";
-static NSString * const PEJDefaultImageName = @"defaultimage";
+static NSString * const PEJDefaultImageName = @"no_image";
 
 @interface Utilities : NSObject
 
