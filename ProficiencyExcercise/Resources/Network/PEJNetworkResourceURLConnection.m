@@ -16,8 +16,7 @@
 
 @implementation PEJNetworkResourceURLConnection
 
-- (instancetype)initWithRequest:(NSURLRequest *)request completion:(PEJNetworkResourceCompletion)completion failure:(PEJNetworkResourceFailure)failure
-{
+- (instancetype)initWithRequest:(NSURLRequest *)request completion:(PEJNetworkResourceCompletion)completion failure:(PEJNetworkResourceFailure)failure {
     self = [super initWithRequest:request delegate:self startImmediately:NO];
     if (self) {
         _completion = completion;

@@ -31,8 +31,7 @@
     return self;
 }
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [self initWithDictionary:[NSDictionary dictionary]];
     if (self) {
     }

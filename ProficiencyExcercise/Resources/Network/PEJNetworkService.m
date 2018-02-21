@@ -9,8 +9,7 @@
 #import "PEJNetworkService.h"
 
 @implementation PEJNetworkService
-- (instancetype)initWithApiClient:(id<PEJApiClient>)apiClient
-{
+- (instancetype)initWithApiClient:(id<PEJApiClient>)apiClient {
     self = [super init];
     if (self) {
         _client = apiClient;
