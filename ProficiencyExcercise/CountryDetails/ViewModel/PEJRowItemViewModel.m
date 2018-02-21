@@ -25,7 +25,7 @@
 
 -(NSString *)getTitle {
     if(self.rowItem.title) {
-        return self.rowItem.title;
+        return [self.rowItem.title stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     }
     else {
         return @"";
@@ -34,7 +34,7 @@
 
 -(NSString *)getDescription {
     if(self.rowItem.itemDescription) {
-        return self.rowItem.itemDescription;
+        return [self.rowItem.itemDescription stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     }
     else {
         return @"";
