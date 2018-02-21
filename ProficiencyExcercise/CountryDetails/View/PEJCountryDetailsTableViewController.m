@@ -15,8 +15,7 @@
 @end
 
 @implementation PEJCountryDetailsTableViewController
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         _viewModel = [[PEJCountryDetailsViewModel alloc]init];
@@ -52,7 +51,7 @@
     
     //Configure TableView
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.estimatedRowHeight = 100;
+    self.tableView.estimatedRowHeight = 122;
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
     [self.tableView registerClass:[PEJCountryDetailsTableViewCell class] forCellReuseIdentifier:PEJCountryDetailsTableViewCellIdentifier];
 }
@@ -99,7 +98,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PEJCountryDetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:PEJCountryDetailsTableViewCellIdentifier forIndexPath:indexPath];
-
+    
     PEJRowItemViewModel *rowItemViewModel = [self.viewModel.getRowItems objectAtIndex:[indexPath row]];
     [cell configureCellWith:rowItemViewModel];
     return cell;

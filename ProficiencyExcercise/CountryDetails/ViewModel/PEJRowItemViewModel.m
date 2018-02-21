@@ -14,8 +14,7 @@
 @end
 
 @implementation PEJRowItemViewModel
-- (instancetype)initWith:(PEJRowItem *)rowItem
-{
+- (instancetype)initWith:(PEJRowItem *)rowItem {
     self = [super init];
     if (self) {
         _rowItem = rowItem;
